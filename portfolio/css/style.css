@@ -1,0 +1,555 @@
+@charset "utf-8";
+
+/* =======================共通設定========================= */
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 80%;
+    font-family: 'Sawarabi Gothic', sans-serif;
+    overflow: auto;
+
+}
+
+
+body {
+    line-height: 1.7;
+    color: #432;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 10rem;
+    text-align: center;
+    margin-bottom: 70px;
+    color: rgb(42, 120, 131);
+    transform: rotate(-10deg);
+    letter-spacing: 10px;
+}
+
+
+h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.wrapper,
+#wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* =======================ヘッダー========================= */
+#top {
+    position: relative;
+}
+
+.headerimg {
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    margin: 0 0 30rem 0;
+
+}
+
+.nabigation {
+    display: flex;
+    justify-content: space-between;
+}
+
+.headerul {
+    display: flex;
+    position: absolute;
+    top: 5%;
+    right: 10%;
+    font-size: 1.25rem;
+    list-style-type: none;
+}
+
+.headerul li {
+    margin-left: 36px;
+}
+
+.headerul a {
+    color: #ffff;
+}
+
+.headerul a:hover {
+    color: #f37601;
+}
+
+
+/* =======================Aboutme========================= */
+
+#aboutme {
+    margin-bottom: 100px;
+}
+
+.amflex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.kao {
+    width: 45%;
+    height: 45%;
+    margin-right: 10%;
+}
+
+.textbox {
+    text-align: center;
+}
+
+.textbox__p {
+    text-align: left;
+    padding-bottom: 20px;
+    padding-top: 0;
+}
+
+.TextRandomAnime {
+    width: 100%;
+}
+
+.amgrid {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 200px;
+}
+
+.ambox {
+    margin-right: 3rem;
+    text-align: center;
+
+}
+
+.ambox__p {
+    width: 350px;
+    text-align: center;
+}
+
+.ambox__ps {
+    padding: 0;
+}
+
+.amboximg {
+    width: 250px;
+    height: auto;
+    text-align: center;
+}
+
+
+/* =============↓動くCSS↓=============== */
+
+/*========= レイアウトのためのCSS ===============*/
+p {
+    text-align: center;
+    padding: 50px 0;
+    font-size: 1.3rem;
+    letter-spacing: 0.2em;
+}
+
+/*==================================================
+  ランダムにテキスト出現する
+  ===================================*/
+.TextRandomAnime span {
+    opacity: 0;
+}
+
+.TextRandomAnime.appearRandomtext span {
+    animation: text_randomanime_on .5s ease-out forwards;
+}
+
+@keyframes text_randomanime_on {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.TextRandomAnime.appearRandomtext span:nth-child(2n) {
+    animation-delay: .5s;
+    /* spanのついた2の倍数の文字列の変化を0.5秒遅らせる*/
+}
+
+.TextRandomAnime.appearRandomtext span:nth-child(3n+1) {
+    animation-delay: .15s;
+    /* spanのついた3の倍数＋1の文字列の変化を0.15秒遅らせる*/
+}
+
+
+/* =============↑動くCSS↑=============== */
+
+/* =======================skills========================= */
+#skills {
+    margin-top: 200px;
+    text-align: center;
+}
+
+.TextRandomAnime {
+    padding: 0;
+    padding-top: 3rem;
+}
+
+.skil {
+    display: flex;
+}
+
+.skill__section {
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 100px;
+}
+
+.strengs__s {
+    text-align: left;
+    width: 900px;
+    padding-bottom: 2.5rem;
+}
+
+.strengs__p {
+    padding: 0;
+    text-align: left;
+}
+
+h3 {
+    font-size: 1.5rem;
+    padding-bottom: 2rem;
+    color: rgb(209, 84, 46);
+}
+
+#skills__srcle {
+    padding-top: 30px;
+}
+
+
+.chart-area {
+    /*円グラフがスマホでつぶれないようにする*/
+    position: relative;
+    width: 100%;
+    height: 70vh;
+}
+
+#chart01 {
+    width: 50%;
+}
+
+
+/* =======================Works========================= */
+#works {
+    margin-top: 200px;
+    text-align: center;
+}
+
+.works__innner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.works__item {
+    width: 353px;
+    height: 270px;
+}
+
+.works__p {
+    padding: 1.5rem 0 6rem 0;
+    width: 75%;
+    margin: auto;
+}
+
+.works__fig {
+    width: 50%;
+}
+
+
+/* =======================Contact========================= */
+#contact {
+    margin-top: 200px;
+    text-align: center;
+}
+
+.forms {
+    margin-right: 25%;
+}
+
+.inputs {
+    display: flex;
+    justify-content: right;
+    margin-bottom: 2%;
+}
+
+label {
+    font-size: 1.125rem;
+    margin-right: 10%;
+    margin-top: 2%;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    width: 100%;
+    max-width: 440px;
+    background: rgba(110, 109, 110, 0.5);
+    border: 1px #fff solid;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+textarea {
+    background: rgba(110, 109, 110, 0.5);
+    border: 1px #fff solid;
+    padding: 10px;
+    font-size: 1rem;
+    max-width: 440px;
+    width: 100%;
+    height: 9rem;
+}
+
+.button {
+    width: 200px;
+    height: auto;
+    margin-top: 40px;
+}
+
+
+/* =============↓動くCSS↓=============== */
+
+/*リンクの形状*/
+
+#page-top a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f37601;
+    border-radius: 5px;
+    width: 70px;
+    height: 70px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 0.6rem;
+    transition: all 0.3s;
+}
+
+#page-top a:hover {
+    background: rgb(42, 120, 131);
+}
+
+/*リンクを右下に固定*/
+#page-top {
+    position: fixed;
+    right: 30px;
+    bottom: 10px;
+    z-index: 2;
+    /*はじめは非表示*/
+    opacity: 0%;
+    transform: translateY(500px);
+}
+
+/*　上に上がる動き　*/
+
+#page-top.UpMove {
+    animation: UpAnime 0.8s forwards;
+}
+
+@keyframes UpAnime {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*　下に下がる動き　*/
+
+#page-top.DownMove {
+    animation: DownAnime 0.5s forwards;
+}
+
+@keyframes DownAnime {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(100px);
+    }
+}
+
+
+/* =============↑動くCSS↑=============== */
+
+/* =======================footer========================= */
+footer {
+    margin-top: 60px;
+    position: relative;
+}
+
+.footer__p {
+    font-size: 1.2rem;
+    color: rgb(105, 43, 43);
+    position: absolute;
+    left: 50%;
+    top: 95%;
+    /*コレ*/
+    transform: translate(-50%, -50%);
+    margin: 0;
+    display: inline;
+}
+
+/* =======================tablet版========================= */
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 60%;
+    }
+
+    .amgrid {
+        display: block;
+
+    }
+
+    .ambox__p {
+        display: block;
+        margin: auto;
+    }
+
+
+    .strengs__s {
+        text-align: left;
+        width: auto;
+        padding-bottom: 2.5rem;
+    }
+
+
+    .works__fig {
+        width: 45%;
+    }
+
+
+    .forms {
+        margin: auto;
+        margin-right: 10%;
+    }
+
+}
+
+/* =======================スマホ版========================= */
+@media screen and (max-width:414px) {
+    html {
+        font-size: 60%;
+    }
+
+    h1 {
+        font-size: 8rem;
+    }
+
+    .headerimg {
+        margin: 0 0 10rem 0;
+    }
+
+    #page-top {
+        display: none;
+    }
+
+    /* =============Aboutme=============== */
+    .amgrid {
+        margin-bottom: 100px;
+    }
+
+    .kao {
+        width: 70%;
+        height: 70%;
+        margin: auto;
+        padding-bottom: 50px;
+    }
+
+    .textbox__p {
+        text-align: center;
+    }
+
+    .amflex {
+        display: block;
+        text-align: center;
+    }
+
+    .amboximg {
+        width: 200px;
+        height: auto;
+        text-align: center;
+    }
+
+    /* =============skills=============== */
+    #skills {
+        margin-top: 100px;
+    }
+
+    /* =============works=============== */
+    #works {
+        margin-top: 100px;
+    }
+
+    .works__innner {
+        display: block;
+    }
+
+    .works__fig {
+        width: 80%;
+        margin: auto;
+        text-align: center;
+    }
+
+    /* =============contact=============== */
+    #contact {
+        margin-top: 100px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"] {
+        width: 80%;
+    }
+    label {
+        font-size: 1.125rem;
+        margin-right: 3%;
+        margin-top: 2%;
+    }
+
+    .button {
+        width: 100px;
+        height: auto;
+        margin-top: 40px;
+    }
+
+}

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ポートフォリオ</title>
+    <!--Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap" rel="stylesheet">
+
+    <!--レスcss-->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+
+    <!--↓動くcss-->
+    <link rel="stylesheet" type="text/css" href="http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/8-1/css/reset.css">
+    <!--↓独自css-->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!---------- header ---------->
+    <header id="top">
+        <video src="img/人-バイクアニメーション.mp4" class="headerimg" loop autoplay muted></video>
+
+        <div class="nabigation wrapper">
+            <nav>
+                <ui class="headerul">
+                    <li><a href="#top">Top</a></li>
+                    <li><a href="#aboutme">Aboutme</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#works">Works</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ui>
+            </nav>
+        </div>
+    </header>
+
+    <!---------- AboutMe ---------->
+    <main>
+        <div id="aboutme">
+            <h1 class="TextRandomAnime ">AboutMe</h1>
+            <div class="amflex wrapper">
+                <img src="img/kao.png" alt="似顔絵" class="kao">
+                <div class="textbox">
+                    <p class="textbox__p ">はじめまして！<br>
+                        <strong>畠山夏芽（はたけやまなつめ）</strong>と申します。
+                        webデザイナーとしてお客様の商品・サービスを
+                        多くの人にお届けするお手伝いをさせていただきたいと
+                        考えています。</p>
+                    <p class="textbox__p ">出身地：広島県<br>生年月日：1998年8月1日<br>
+                        前職：行政事務員（公務員）<br>
+                        趣味：ツーリング、キャンプ、読書、映画鑑賞<br>座右の銘：
+                        情けは人の為ならず　</p>
+                </div>
+            </div>
+
+            <div class="amgrid wrapper">
+                <div class="ambox">
+                    <video src="img/背景-hata.mp4" class="amboximg" autoplay muted loop></video>
+                    <div class="ambox__p">
+                        <h2>目標達成力</h2>
+                        <p class="ambox__ps">目標達成の為には何が必要か考えて順序だてて行動します。</p>
+                    </div>
+                </div>
+                <div class="ambox">
+                    <video src="img/pc.mp4" alt="パソコンで検索している様子" class="amboximg" autoplay muted loop></video>
+                    <div class="ambox__p">
+                        <h2>検索力</h2>
+                        <p class="ambox__ps">分からないこと、初めてのことはまず自分で検索します。</p>
+                    </div>
+                </div>
+                <div class="ambox">
+                    <video src="img/hands.mp4" alt="バイク仮写真" class="amboximg" autoplay muted loop></video>
+                    <div class="ambox__p">
+                        <h2>コミュニケーション力</h2>
+                        <p class="ambox__ps">周りの人と協力しながら、お客様の要望に寄り添った制作をします。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/div aboutme-->
+
+        <!---------- Skills ---------->
+        <div id="skills">
+            <h1 class="TextRandomAnime">Skills</h1>
+            <h2>私のできること</h2>
+            <div class="skill__section wrapper">
+                <section class="strengs__s">
+                    <h3>1.WEB制作</h3>
+                    <p class="strengs__p">HTML5,CSS3，Javascriptを用いてwebサイトを制作できます。wordpressは勉強中です。
+                    </p>
+                </section>
+                <section class="strengs__s">
+                    <h3>2.デザイン</h3>
+                    <p class="strengs__p">和のテイストのページ、イラストなどを使ったページのデザインが好きです。その他には、バナー、ロゴ、ページのワンポイントに使うイラストなどの制作が得意です。
+                    </p>
+                </section>
+                <section class="strengs__s">
+                    <h3>3.動画制作</h3>
+                    <p class="strengs__p">勉強中ではありますが、PremierePro、AfterEffectsを用いて、動画やアニメーションを作成できます。これからも力を入れていきたい分野です。
+                    </p>
+                </section>
+            </div>
+            <h2>スキルの習得率</h2>
+            <div id="skills__srcle ">
+                <div class="chart-area">
+                    <canvas id="chart01"></canvas>
+                </div>
+            </div>
+
+            <!---------- Works ---------->
+            <div id="works">
+                <h1 class="TextRandomAnime">Works</h1>
+                <div class="works__innner wrapper">
+                    <figure class="works__fig">
+                        <a href="健康堂（コーディング練習）/index.html">
+                            <img src="img/kenkodo.svg" alt="" class="works__item">
+                        </a>
+                        <p class="works__p">【コーディング】<br>デザインの授業で、「広島健康堂」というタイトルをお題に、ホームページをデザイン、コーディングしました。</p>
+                    </figure>
+                    <figure class="works__fig">
+                        <a href="img/稲コアラ.mp4">
+                            <img src="img/稲コアラ.svg" alt="" class="works__item">
+                        </a>
+                        <p class="works__p">【動画】<br>アフターエフェクトを勉強する際に作った動画です。コアラが揺れるだけです。</p>
+                    </figure>
+                    <figure class="works__fig">
+                        <a href="img/背景-ヘッダー.mp4">
+                            <img src="img/ヘッダー.svg" alt="" class="works__item">
+                        </a>
+                        <p class="works__p">【動画】<br>ポートフォリオを作る際に、最初にアフターエフェクトで作った動画です。イラストも全て作成しました。</p>
+                    </figure>
+                    <figure class="works__fig">
+                        <a href="img/アクラポビッチ.png">
+                            <img src="img/アクラポビッチ.png" alt="" class="works__item">
+                        </a>
+                        <p class="works__p">【イラスト】<br>illustratorを習いたての頃に、ペンツールの練習として描いた作品です。</p>
+                    </figure>
+                    <figure class="works__fig">
+                        <a href="img/osban.svg">
+                            <img src="img/osban.svg" alt="" class="works__item">
+                        </a>
+                        <p class="works__p">【デザイン】<br>デザインの授業で、教室内で使用する殺菌スプレーのラベルデザインをした時の作品です。教室内コンペでこの作品が選ばれ、実際にラベルにデザインを張っていただきました。</p>
+                    </figure>
+                    <figure class="works__fig">
+                        <a href="img/meishi.svg">
+                            <img src="img/アートボード 1.svg" alt="" class="works__item">
+                        </a>
+                        <p class="works__p">【デザイン】<br>デザインの授業で、自分の名刺をデザインしました。自分の趣味であるバイクを中心としたイラストの名刺を作成しました。</p>
+                    </figure>
+      
+                </div><!-- works__innner -->
+            </div><!-- works -->
+
+
+            <!---------- Contact ---------->
+            <div id="contact">
+                <h1 class="TextRandomAnime">Contact</h1>
+                <form action="#" method="POST" class="forms wrapper">
+                    <div class="inputs">
+                        <label for="name">お名前※</label>
+                        <input type="text" name="your-name" id="name">
+                    </div>
+                    <div class="inputs">
+                        <label for="kana">フリガナ※</label>
+                        <input type="text" name="your-name2" id="kana">
+                    </div>
+                    <div class="inputs">
+                        <label for="kaisya">会社名</label>
+                        <input type="text" name="campany" id="kaisya">
+                    </div>
+                    <div class="inputs">
+                        <label for="telnum">電話番号</label>
+                        <input type="tel" name="telnumber" id="telnum">
+                    </div>
+                    <div class="inputs">
+                        <label for="mail">メールアドレス※</label>
+                        <input type="email" name="emails" id="mail">
+                    </div>
+                    <div class="inputs">
+                        <label for="what">お問い合わせ内容※</label>
+                        <textarea name="textarea" id="what"></textarea>
+                    </div>
+                </form>
+                <input type="image" class="button" src="img/submit.png">
+            </div>
+            <p id="page-top" class="hidden"><a href="#">Page Top</a></p>
+
+    </main>
+
+    <footer>
+        <img src="img/フッター.png" alt="">
+        <p class="footer__p">&copy;Natsume Hatakeyama</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/8-1/js/8-1.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/protonet-jquery.inview/1.1.2/jquery.inview.min.js"></script>
+
+    <!--自作のJS-->
+    <script src="js/index.js"></script>
+</body>
+
+</html>
