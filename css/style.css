@@ -475,6 +475,7 @@ footer {
     h1 {
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
         font-size: 6rem;
+        letter-spacing: 1px;
     }
 
     .headerimg {
@@ -484,6 +485,11 @@ footer {
     #page-top {
         display: none;
     }
+    h3 {
+        font-size: 1.7rem;
+        padding-bottom: 2rem;
+        color: rgb(209, 84, 46);
+    }
 
     /* =============Aboutme=============== */
     .amgrid {
@@ -491,8 +497,8 @@ footer {
     }
 
     .kao {
-        width: 70%;
-        height: 70%;
+        width: 90%;
+        height: 90%;
         margin: auto;
         padding-bottom: 50px;
     }
@@ -505,9 +511,12 @@ footer {
         display: block;
         text-align: center;
     }
-
+    .ambox {
+        margin: auto;
+    }
+    
     .amboximg {
-        width: 200px;
+        width: 300px;
         height: auto;
         text-align: center;
     }
@@ -515,6 +524,14 @@ footer {
     /* =============skills=============== */
     #skills {
         margin-top: 100px;
+    }
+    .chart-area {
+        /*円グラフがスマホでつぶれないようにする*/
+        position: relative;
+        width: 90%;
+        height: 70vh;
+       margin: auto;
+       text-align: center;
     }
 
     /* =============works=============== */
@@ -536,6 +553,10 @@ footer {
     #contact {
         margin-top: 100px;
     }
+    .inputs {
+        display:block;
+
+    }
     input[type="text"],
     input[type="email"],
     input[type="tel"] {
@@ -543,8 +564,6 @@ footer {
     }
     label {
         font-size: 1.125rem;
-        margin-right: 3%;
-        margin-top: 2%;
     }
 
     .button {
