@@ -469,10 +469,11 @@ footer {
 /* =======================スマホ版========================= */
 @media screen and (max-width:414px) {
     html {
-        font-size: 60%;
+        font-size: 80%;
     }
 
     h1 {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
         font-size: 8rem;
     }
 
