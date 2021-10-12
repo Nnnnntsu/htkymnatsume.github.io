@@ -125,7 +125,7 @@ $('#chart01').on('inview', function (event, isInView) { //画面上に入った�
     var chart = new Chart(ctx, {
       type: 'pie', //グラフのタイプ
       data: { //グラフのデータ
-        labels: [ "HTML5,CSS3", "javascript","illustrator,Photoshop", "AfterEffects,premia", "wordpress"], //データの名前
+        labels: [ "HTML5,CSS3", "javascript","illustrator,Photoshop,XD", "AfterEffects,premia", "wordpress"], //データの名前
         datasets: [{
           label: "職種別比率", //グラフのタイトル
           backgroundColor: ["#558949", "#A84492", " #692C8F", "#F7C303", "#D93723"], //グラフの背景色

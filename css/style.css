@@ -332,7 +332,7 @@ textarea {
 }
 
 .button {
-    width: 200px;
+    width: 150px;
     height: auto;
     margin-top: 40px;
 }
@@ -490,6 +490,11 @@ footer {
         padding-bottom: 2rem;
         color: rgb(209, 84, 46);
     }
+
+    .headerul {
+        right: 5%;
+    }
+    
 
     /* =============Aboutme=============== */
     .amgrid {
