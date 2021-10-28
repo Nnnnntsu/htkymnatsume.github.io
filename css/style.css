@@ -66,8 +66,10 @@ h2 {
 }
 
 .headerimg {
-    background-size: cover;
-    width: 100%;
+    /* background-size: cover; */
+    object-fit: cover;
+    object-position: center bottom;
+    width: 100vw;
     height: auto;
     margin: 0 0 30rem 0;
 
@@ -76,6 +78,7 @@ h2 {
 .nabigation {
     display: flex;
     justify-content: space-between;
+    z-index: 9999;
 }
 
 .headerul {
@@ -467,7 +470,7 @@ footer {
 }
 
 /* =======================スマホ版========================= */
-@media screen and (max-width:414px) {
+@media screen and (max-width:415px) {
     html {
         font-size: 80%;
     }

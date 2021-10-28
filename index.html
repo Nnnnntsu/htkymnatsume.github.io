@@ -32,8 +32,6 @@
 
     <!---------- header ---------->
     <header id="top">
-        <video src="img/人-バイクアニメーション.mp4" class="headerimg" playsinline loop autoplay muted></video>
-
         <div class="nabigation wrapper">
             <nav>
                 <ui class="headerul">
@@ -45,6 +43,8 @@
                 </ui>
             </nav>
         </div>
+        <video src="img/人-バイクアニメーション.mp4" class="headerimg" playsinline loop autoplay muted poster="img/scshot.pngZ
+        "></video>
     </header>
 
     <!---------- AboutMe ---------->
@@ -58,8 +58,7 @@
                         <strong>畠山夏芽（はたけやまなつめ）</strong>と申します。<br>コーディングとデザインの両方の分野で力を発揮できるように日々勉強中です。<br>新しいことにも積極的に挑戦していきたい!それが誰かの役に立てばもっといい!と考えています。よろしく願いします。</p>
                     <p class="textbox__p ">出身地：広島県<br>生年月日：1998年8月1日<br>
                         前職：行政事務員（公務員）<br>
-                        趣味：ツーリング、キャンプ、読書、映画鑑賞<br>座右の銘：
-                        情けは人の為ならず　</p>
+                        趣味：ツーリング、キャンプ、読書、映画鑑賞<br></p>
                 </div>
             </div>
 
@@ -110,19 +109,13 @@
                     </p>
                 </section>
             </div>
-            <h2>スキルの習得率</h2>
-            <div id="skills__srcle ">
-                <div class="chart-area">
-                    <canvas id="chart01"></canvas>
-                </div>
-            </div>
 
             <!---------- Works ---------->
             <div id="works">
                 <h1 class="TextRandomAnime">Works</h1>
                 <div class="works__innner wrapper">
                     <figure class="works__fig">
-                        <a href="kenkodo/index.html">
+                        <a href="健康堂（コーディング練習）/index.html">
                             <img src="img/kenkodo.svg" alt="" class="works__item">
                         </a>
                         <p class="works__p">【コーディング】<br>デザインの授業で、「広島健康堂」というタイトルをお題に、ホームページをデザイン、コーディングしました。</p>
@@ -131,17 +124,17 @@
                         <a href="img/osban.png">
                             <img src="img/osban.png" alt="" class="works__item">
                         </a>
-                        <p class="works__p">【デザイン】<br>デザインの授業で、教室内で使用する殺菌スプレーのラベルデザインをした時の作品です。教室内コンペでこの作品が選ばれ、実際にラベルにデザインを張っていただきました。</p>
+                        <p class="works__p">【デザイン】<br>デザインの授業で、教室内で使用する殺菌スプレーのラベルデザインをした時の作品です。教室内コンペでこの作品が選ばれ、実際にラベルにデザインを貼っていただきました。</p>
                     </figure>
                     <figure class="works__fig">
                         <a href="img/meishi.svg">
-                            <img src="img/meishi2.svg" alt="" class="works__item">
+                            <img src="img/アートボード 1.svg" alt="" class="works__item">
                         </a>
                         <p class="works__p">【デザイン】<br>デザインの授業で、自分の名刺をデザインしました。自分の趣味であるバイクを中心としたイラストの名刺を作成しました。</p>
                     </figure>
                     <figure class="works__fig">
-                        <a href="img/akrapovic.png">
-                            <img src="img/akrapovic.png" alt="" class="works__item">
+                        <a href="img/アクラポビッチ.png">
+                            <img src="img/アクラポビッチ.png" alt="" class="works__item">
                         </a>
                         <p class="works__p">【イラスト】<br>illustratorを習いたての頃に、ペンツールの練習として描いた作品です。</p>
                     </figure>
@@ -166,18 +159,22 @@
             <!---------- Contact ---------->
             <div id="contact">
                 <h1 class="TextRandomAnime">Contact</h1>
-                <form action="#" method="POST" class="forms wrapper">
+
+                <p>※は必須です。</p>
+                <form action="mail.php" method="POST" class="forms wrapper">
                     <div class="inputs">
                         <label for="name">お名前※</label>
-                        <input type="text" name="your-name" id="name">
+                        <input id="name" type="text" name="お名前※" placeholder="例）山田　太郎" required>
                     </div>
+
                     <div class="inputs">
                         <label for="kana">フリガナ※</label>
-                        <input type="text" name="your-name2" id="kana">
+                        <input id="kana"  type="text" name="フリガナ※"  placeholder="例）ヤマダ　タロウ" required>
                     </div>
+
                     <div class="inputs">
                         <label for="kaisya">会社名</label>
-                        <input type="text" name="campany" id="kaisya">
+                        <input type="text" name="会社名" id="kaisya">
                     </div>
                     <div class="inputs">
                         <label for="telnum">電話番号</label>
@@ -185,15 +182,21 @@
                     </div>
                     <div class="inputs">
                         <label for="mail">メールアドレス※</label>
-                        <input type="email" name="emails" id="mail">
+                        <input type="email" name="emails" id="mail" placeholder="例）example@aaa.com"　required>
                     </div>
                     <div class="inputs">
                         <label for="what">お問い合わせ内容※</label>
-                        <textarea name="textarea" id="what"></textarea>
+                        <textarea name="textarea" id="what" 　required></textarea>
                     </div>
+
+                    <input type="submit" class="button" src="img/submit.png">
                 </form>
-                <input type="image" class="button" src="img/submit.png">
+
+
             </div>
+
+
+
             <p id="page-top" class="hidden"><a href="#">Page Top</a></p>
 
     </main>
