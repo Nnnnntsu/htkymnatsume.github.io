@@ -39,6 +39,7 @@ h1 {
     color: rgb(42, 120, 131);
     transform: rotate(-10deg);
     letter-spacing: 10px;
+    pointer-events: none;
 }
 
 
@@ -72,7 +73,8 @@ h2 {
     width: 100vw;
     height: auto;
     margin: 0 0 30rem 0;
-
+    pointer-events: none;
+    
 }
 
 .nabigation {
@@ -90,17 +92,19 @@ h2 {
     list-style-type: none;
 }
 
+
 .headerul li {
     margin-left: 36px;
 }
 
 .headerul a {
-    color: #ffff;
+    color: rgb(255, 255, 255);
 }
 
-.headerul a:hover {
+.headerul a:hover{
     color: #f37601;
 }
+
 
 
 /* =======================Aboutme========================= */
