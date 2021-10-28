@@ -275,11 +275,14 @@ h3 {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    width: 80vw;
+    margin: 0 auto;
 }
 
 .works__item {
-    width: 353px;
-    height: 270px;
+    width:100%;
+    height:auto;
+    
 }
 
 .works__p {
@@ -290,6 +293,8 @@ h3 {
 
 .works__fig {
     width: 50%;
+    padding: 0 3%;
+    background-color: rgb(255, 255, 255);
 }
 
 
