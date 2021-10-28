@@ -1,0 +1,759 @@
+@use "variables"as v;
+
+/* トップスライドショー */
+
+.slide {
+  height: 90vh;
+  overflow: hidden;
+  position: relative;
+
+  @include v.mb {
+    height: 100vh;
+    -webkit-box-pack: center;
+  }
+
+  &__title {
+    font-size: v.rem(50);
+    color: v.$w-font;
+    z-index: 11;
+    position: absolute;
+    top: 75%;
+    right: -5%;
+    transform: translate(-50%, -50%);
+
+    @include v.tb {
+      right: -15%;
+    }
+
+    @include v.mb {
+      font-size: v.rem(48);
+      text-shadow: 0px 7px 3px #000;
+      min-height: 70vh;
+      top: 50%;
+      left: 50%;
+      right: auto;
+      writing-mode: vertical-rl;
+      -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+      place-items: center;
+    }
+
+    @include v.mn {
+      font-size: v.rem(46);
+    }
+  }
+
+  &__item {
+    z-index: 10;
+    opacity: 0;
+    width: 100%;
+    height: 90vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    -webkit-animation: anime 15s 0s infinite;
+    animation: anime 15s 0s infinite;
+
+    @include v.mb {
+      min-height: 100vh;
+    }
+  }
+
+  &__item:nth-of-type(2) {
+    -webkit-animation-delay: 5s;
+    animation-delay: 5s;
+  }
+
+  &__item:nth-of-type(3) {
+    -webkit-animation-delay: 10s;
+    animation-delay: 10s;
+  }
+}
+
+/* ふわっとアニメーション */
+@keyframes anime {
+  0% {
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  35% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+    z-index: 9;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes anime {
+  0% {
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  35% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+    z-index: 9;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+//スクロール設定
+/*スクロールダウン全体の場所*/
+.scroll {
+  /*全体の高さ*/
+  text-align: center;
+
+  /* 線の描写 */
+  &__line {
+    width: 3px;
+    height: 100px;
+    transform-origin: top center;
+    transform: scale(0);
+    background: v.$w-font;
+    display: inline-block;
+    animation: scrollLine 2s infinite both;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    z-index: 13;
+
+    @include v.tb {
+      height: 75px;
+    }
+  }
+}
+
+/*高さ・位置・透過が変化して線が上から下に動く*/
+@keyframes scrollLine {
+  0% {
+    transform: scaleY(0);
+    transform-origin: top center;
+  }
+
+  5% {
+    transform: scaleY(0);
+    transform-origin: top center;
+  }
+
+  50% {
+    transform: scaleY(1);
+    transform-origin: top center;
+  }
+
+  55% {
+    transform: scaleY(1);
+    transform-origin: bottom center;
+  }
+
+  100% {
+    transform: scaleY(0);
+    transform-origin: bottom center;
+  }
+}
+
+//スクロール設定
+//スクロールダウン全体の場所
+// .scroll {
+//   position: absolute;
+//   left: 50%;
+//   bottom: 35px;
+//   //全体の高さ
+//   height: 160px;
+//   z-index: 13;
+// }
+
+// //Scrollテキストの描写
+// ※テキストを入れたいときはhtmlにspanタグ入れてください
+// .scroll span {
+//   //描画位置
+//   //テキストの形状
+//   color: #fff;
+//   font-size: 1px;
+// }
+
+// //線の描写
+// .scroll::after {
+//   content: "";
+//   //描画位置
+//   position: absolute;
+//   top: 0;
+//   //線の形状
+//   width: 3px;
+//   height: 125px;
+//   background: v.$w-font;
+//   //線の動き1.4秒かけて動く。永遠にループ
+//   animation: pathmove 2.5s ease-in-out infinite;
+//   opacity: 0;
+// }
+
+// //高さ・位置・透過が変化して線が上から下に動く
+// @keyframes pathmove {
+//   0% {
+//     height: 0;
+//     top: 0;
+//     opacity: 0;
+//   }
+
+//   30% {
+//     height: 125px;
+//     opacity: 1;
+//   }
+
+//   100% {
+//     height: 0;
+//     top: 125px;
+//     opacity: 0;
+//   }
+// }
+
+/* 友畳会にできること */
+.theme {
+  display: flex;
+  margin: 9vw auto;
+  background-image: url(../images/t-logoback.png);
+  background-position: 2vw top;
+  background-size: 28vw;
+
+
+  @include v.me {
+    display: block;
+    background-size: 85vw;
+    background-position: center 14vw;
+    margin: 20vw 5vw 20vw 5vw;
+  }
+
+  @include v.mn {
+    background-position: center center;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    writing-mode: vertical-rl;
+    font-size: v.rem(60);
+    width: 40%;
+    margin-top: 5vw;
+
+    @include v.tb {
+      font-size: v.rem(50);
+      width: 40%;
+    }
+
+    @include v.me {
+      display: block;
+      writing-mode: horizontal-tb;
+      font-size: v.rem(46);
+      width: 100%;
+      margin-top: 0;
+    }
+
+    @include v.mb {
+      font-size: v.rem(30);
+      width: 100%;
+      margin-top: 0;
+    }
+
+    @include v.mn {
+      font-size: v.rem(28);
+    }
+  }
+
+  &__border {
+    border-right: 5px solid v.$c-font;
+
+    @include v.me {
+      border: none;
+    }
+  }
+
+  &__textbox {
+    width: 50%;
+
+    @include v.me {
+      width: 100%;
+      padding-bottom: 10vw;
+    }
+  }
+
+  &__text1,
+  &__text2 {
+    font-size: v.rem(24);
+
+    @include v.tb {
+      font-size: v.rem(21);
+    }
+
+    @include v.mb {
+      font-size: v.rem(16);
+      line-height: 10vw;
+    }
+
+    @include v.mn{
+      font-size: v.rem(12);
+    }
+  }
+
+  &__text1 {
+    margin-top: 7vw;
+  }
+
+  &__text2 {
+    margin-top: 5vw;
+  }
+}
+
+/* 目次 */
+.category {
+  text-align: center;
+  color: v.$w-font;
+
+  &__item1,
+  &__item2,
+  &__item3 {
+    height: 24vw;
+    background-size: cover;
+
+    //目次のhover設定
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+
+    @include v.pr {
+      height: 30vw;
+    }
+
+    @include v.tb {
+      height: 34vw;
+    }
+
+    @include v.me {
+      height: 40vw;
+    }
+
+    @include v.mb {
+      height: 50vw;
+    }
+
+    @include v.mm {
+      height:66vw;
+    }
+  }
+
+  &__hover {
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 0;
+      display: block;
+      z-index: -1;
+      transition: .3s;
+    }
+
+    &:hover {
+      color: v.$w-font;
+
+      &:before {
+        width: 100%;
+      }
+    }
+  }
+
+  &__hover1:before {
+    background-color: rgba(43, 6, 52, 0.7);
+  }
+
+  &__hover2:before {
+    background-color: rgba(167, 172, 59, 0.7);
+  }
+
+  &__hover3:before {
+    background-color: rgba(52, 136, 32, 0.7);
+  }
+
+  //hoverここまで
+
+  &__item1 {
+    background-image: url(../images/t-hojin.jpg);
+    margin-bottom: 2.5vh;
+
+    @include v.pr {
+      margin-bottom: 0.6vw;
+    }
+
+    @include v.tb {
+      margin-bottom: 0.8vw;
+    }
+
+    @include v.mb {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item2 {
+    background-image: url(../images/t-event.jpg);
+    margin-bottom: 2.5vh;
+
+    @include v.pr {
+      margin-bottom: 0.6vw;
+    }
+
+    @include v.tb {
+      margin-bottom: 0.8vw;
+    }
+
+    @include v.mb {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item3 {
+    background-image: url(../images/t-about.jpg);
+  }
+
+  &__title {
+    font-size: 3.6vw;
+
+    @include v.pr {
+      font-size: 4vw;
+    }
+
+    @include v.tb {
+      font-size: 5vw;
+    }
+
+    @include v.me {
+      font-size: 6vw;
+    }
+
+    @include v.mb {
+      font-size: v.rem(34);
+    }
+
+    @include v.mn {
+      font-size: v.rem(30);
+    }
+  }
+
+  &__textbox {
+    padding: 4vw 0 10vw 0;
+
+    @include v.tb {
+      padding: 6vw 0 13vw 0;
+    }
+
+    @include v.me {
+      padding: 7vw 0 14vw 0;
+    }
+
+    @include v.mb {
+      padding: 6vw 0 20vw 0;
+    }
+
+    @include v.mm {
+      padding: 12vw 0 20vw 0;
+    }
+
+    @include v.mn {
+      padding: 10vw 0 20vw 0;
+    }
+  }
+
+  &__text {
+    font-size: 1.6vw;
+    margin-top: 1vw;
+
+    @include v.pr {
+      font-size: 2vw;
+      margin-top: 1.4vw;
+    }
+
+    @include v.tb {
+      font-size: 2.2vw;
+    }
+
+    @include v.me {
+      font-size: 2.7vw;
+    }
+
+    @include v.mb {
+      font-size: v.rem(15);
+      margin-top: 1vw;
+    }
+
+    @include v.mm {
+      font-size: v.rem(14);
+    }
+
+    @include v.mn {
+      font-size: v.rem(12);
+    }
+  }
+
+  &__button {
+    color: v.$link-font;
+    font-size: 1.4vw;
+    border-radius: 45px;
+    background: rgba(255, 255, 255, .7);
+    padding: 0.8vw 3.8vw;
+    display: inline-block;
+    margin-top: 3vh;
+
+    @include v.pr {
+      font-size:2vw;
+      margin-top: 2vh;
+    }
+
+    @include v.tb {
+      font-size: 2.2vw;
+      margin-top: 3vh;
+    }
+
+    @include v.me {
+      font-size: 2.4vw;
+      padding: 1.2vw 4vw;
+      font-weight: bold;
+    }
+
+    @include v.mb {
+      font-size: v.rem(16);
+      padding: 1.4vw 8vw;
+      margin-top: 2.2vh;
+    }
+
+    @include v.mn {
+      font-size: v.rem(14);
+      margin-top: 4vh;
+    }
+
+    //詳しくはこちらhover
+    cursor: pointer;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      font-weight: 900;
+      top: 50%;
+      right: .4em;
+      left: auto;
+      bottom: auto;
+      transform: translateY(-50%);
+    }
+
+    &:hover {
+      background: v.$link-font;
+      color: v.$w-font;
+    }
+  }
+}
+
+/* footerの一個上ロゴ部分 */
+.pre-footer {
+  text-align: center;
+  padding: 12vw 0 3vw 0;
+  position: relative;
+
+  @include v.mb {
+    overflow: hidden;
+    margin-top: 10vw;
+    padding: 0;
+  }
+
+  &__logo {
+
+    @include v.mb {
+      padding-top: 18vw;
+    }
+  }
+
+  &__logo2 {
+    width: 14vw;
+
+    @include v.mb {
+      width: 45vw;
+      margin-bottom: 24.1vw;
+    }
+  }
+
+  &__kumo1,
+  &__kumo2 {
+    position: absolute;
+  }
+
+  &__kumo1 {
+    right: 2vw;
+    top: 4vw;
+    width: 24vw;
+    z-index: -1;
+
+    @include v.mb {
+      width: 55vw;
+      right: -2vw;
+      top: 5vw;
+    }
+  }
+
+  &__kumo2 {
+    left: 10vw;
+    bottom: 2vw;
+
+    @include v.mb {
+      left: -5vw;
+      top: 55vw;
+    }
+  }
+
+  //TOPへ戻る矢印
+  &__arrow {
+    /*矢印と下線の基点とするためrelativeを指定*/
+    position: absolute;
+    /*形状*/
+    display: inline-block;
+    right: 80px;
+    bottom: 80px;
+    padding: 0 auto;
+    color: v.$nav-font;
+    text-decoration: none;
+    outline: none;
+    writing-mode: vertical-rl;
+    -webkit-writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    font-size: v.rem(16);
+
+    @include v.tb {
+      display: none;
+    }
+
+    &::before {
+      content: '';
+      /*絶対配置で下線の位置を決める*/
+      position: absolute;
+      bottom: -20px;
+      right: -10px;
+      /*下線の形状*/
+      width: 2px;
+      height: 160px;
+      background: v.$nav-font;
+      /*アニメーションの指定*/
+      transition: all .3s;
+    }
+
+    &::after {
+      content: '';
+      /*絶対配置で矢印の位置を決める*/
+      position: absolute;
+      top: -45px;
+      right: -15px;
+      /*矢印の形状*/
+      width: 30px;
+      height: 2px;
+      background: v.$nav-font;
+      transform: rotate(130deg);
+      /*アニメーションの指定*/
+      transition: all .3s;
+    }
+
+    &:hover::before {
+      bottom: -10%;
+    }
+
+    &:hover::after {
+      top: -70%;
+    }
+  }
+}
+
+//レスポンシブ用ページトップへ
+
+#page-top2 a {
+  display: none;
+
+  @include v.tb {
+    display: block;
+    width: 70px;
+  }
+
+  &:hover {
+    opacity: .9;
+  }
+}
+
+@include v.tb {
+
+  /*リンクを右下に固定*/
+  #page-top2 {
+    position: fixed;
+    right: 4vw;
+    bottom: 2vh;
+    z-index: 9998;
+    /*はじめは非表示*/
+    opacity: 0;
+    transform: translateY(200px);
+  }
+
+  /*上に上がる動き*/
+
+  #page-top2.UpMove {
+    animation: UpAnime 0.5s forwards;
+  }
+
+  @keyframes UpAnime {
+    from {
+      opacity: 0;
+      transform: translateY(200px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /*下に下がる動き*/
+
+  #page-top2.DownMove {
+    animation: DownAnime 0.5s forwards;
+  }
+
+  @keyframes DownAnime {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(200px);
+    }
+  }
+
+}

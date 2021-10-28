@@ -563,15 +563,19 @@ footer {
 
     .works__innner {
         display: block;
+        margin: 0 auto;
+        
     }
 
     .works__fig {
         width: 100vw;
         margin: 0 auto;
         text-align: center;
+        
     }
     .works__p {
         margin: 0;
+        
     }
     /* =============contact=============== */
     #contact {

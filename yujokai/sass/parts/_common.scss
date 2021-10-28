@@ -1,0 +1,31 @@
+@use "variables" as v;
+
+body {
+  background-color: #f8f4e6;
+  background-image: url(../images/c-bg-img.png);
+  background-repeat: repeat;
+  color: v.$c-font;
+}
+
+main {
+  padding: 0 0 0 13%;
+  font-family: YuMincho, 'Yu Mincho', serif;
+
+  @include v.tb {
+    padding: 0;
+  }
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: v.$nav-font;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
