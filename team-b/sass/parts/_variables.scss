@@ -1,0 +1,75 @@
+//変数準備
+$c-font: #413434;//文章部分、矢印、見出し横の線、和紙の上の載せる黒文字の色
+$nav-font: #090000;//navのテキスト部分
+$w-font: #fff;//白は全部これ
+$foot-back: #0f0110;//footerとお問い合わせボタンの色
+$link-font: #6D6D6B;
+$uw-font: #131111;//白地の上とかに乗せる文字の色
+
+//関数準備
+@function rem($px, $base: 16) {
+  @return $px / $base * 1rem;
+}
+
+//mediaquery1
+$about: 1462px;
+
+@mixin ab {
+  @media (max-width: ($about)) {
+    @content;
+  }
+}
+
+//mediaquery2
+$pro: 1025px;
+
+@mixin pr {
+  @media (max-width: ($pro)) {
+    @content;
+  }
+}
+
+//mediaquery3
+$tablet: 961px;
+
+@mixin tb {
+  @media (max-width: ($tablet)) {
+    @content;
+  }
+}
+
+// //mediaquery4
+$tablet-med: 769px;
+
+@mixin me {
+  @media (max-width: ($tablet-med)) {
+    @content;
+  }
+}
+
+//mediaquery5
+$mobile: 415px;
+
+@mixin mb {
+  @media (max-width: ($mobile)) {
+    @content;
+  }
+}
+
+//mediaquery6
+$mobile-med: 376px;
+
+@mixin mm {
+  @media (max-width: ($mobile-med)) {
+    @content;
+  }
+}
+
+//mediaquery7
+$mobile-mini: 321px;
+
+@mixin mn {
+  @media (max-width: ($mobile-mini)) {
+    @content;
+  }
+}
