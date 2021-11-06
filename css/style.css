@@ -296,6 +296,7 @@ h3 {
 }
 
 .works__fig {
+    margin-bottom: 70px;
     overflow: hidden;
     width: 50%;
     height: auto;
@@ -305,11 +306,16 @@ h3 {
 table{
     margin-top: 30px;
     width: 100%;
+    text-align: left;
 }
 th{
-    margin: 0 auto;
+    text-align: center;
+    height: 50px;
+    font-size: larger;
 }
-
+td{
+    height: 30px;
+}
 /* =======================Contact========================= */
 #contact {
     margin-top: 200px;
