@@ -280,8 +280,13 @@ h3 {
 }
 
 .works__item {
-    width:100%;
-    height:auto;
+
+    display: block;
+	transition-duration: 0.3s;	
+}
+.works__item:hover {
+	transform: scale(1.1);	/*画像の拡大率*/
+	transition-duration: 0.3s;	/*変化に掛かる時間*/
 }
 
 .works__p {
@@ -291,11 +296,19 @@ h3 {
 }
 
 .works__fig {
+    overflow: hidden;
     width: 50%;
+    height: auto;
     padding: 0 3%;
-    background-color: rgb(255, 255, 255);
 }
 
+table{
+    margin-top: 30px;
+    width: 100%;
+}
+th{
+    margin: 0 auto;
+}
 
 /* =======================Contact========================= */
 #contact {
