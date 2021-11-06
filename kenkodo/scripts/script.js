@@ -5,9 +5,9 @@
 var windowwidth = window.innerWidth || document.documentElement.clientWidth || 0;
     if (windowwidth > 768){
       var responsiveImage = [//PC用の画像
-        { src: '../imgs/temple1.jpg'},
-        { src: '../imgs/temple2.jpg'},
-        { src: '../imgs/temple3.jpg'}
+        { src: '../kenkodo/imgs/temple1.jpg'},
+        { src: '../kenkodo/imgs/temple2.jpg'},
+        { src: '../kenkodo/imgs/temple3.jpg'}
       ];
     } else {
       var responsiveImage = [//タブレットサイズ（768px）以下用の画像
