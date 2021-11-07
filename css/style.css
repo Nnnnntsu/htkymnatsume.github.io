@@ -13,7 +13,6 @@ html {
     font-size: 80%;
     font-family: 'Sawarabi Gothic', sans-serif;
     overflow: auto;
-
 }
 
 
@@ -74,7 +73,7 @@ h2 {
     height: auto;
     margin: 0 0 30rem 0;
     pointer-events: none;
-    
+
 }
 
 .nabigation {
@@ -101,7 +100,7 @@ h2 {
     color: rgb(255, 255, 255);
 }
 
-.headerul a:hover{
+.headerul a:hover {
     color: #f37601;
 }
 
@@ -269,24 +268,27 @@ h3 {
 #works {
     margin-top: 200px;
     text-align: center;
+    max-width: 1400px;
 }
 
 .works__innner {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    width: 80vw;
     margin: 0 auto;
 }
 
 .works__item {
 
     display: block;
-	transition-duration: 0.3s;	
+    transition-duration: 0.3s;
 }
+
 .works__item:hover {
-	transform: scale(1.1);	/*画像の拡大率*/
-	transition-duration: 0.3s;	/*変化に掛かる時間*/
+    transform: scale(1.1);
+    /*画像の拡大率*/
+    transition-duration: 0.3s;
+    /*変化に掛かる時間*/
 }
 
 .works__p {
@@ -303,19 +305,22 @@ h3 {
     padding: 0 3%;
 }
 
-table{
+table {
     margin-top: 30px;
     width: 100%;
     text-align: left;
 }
-th{
+
+th {
     text-align: center;
     height: 50px;
     font-size: larger;
 }
-td{
+
+td {
     height: 30px;
 }
+
 /* =======================Contact========================= */
 #contact {
     margin-top: 200px;
@@ -365,7 +370,7 @@ textarea {
     width: 150px;
     height: auto;
     margin-top: 40px;
-    margin-left: 50% ;
+    margin-left: 40%;
     font-size: large;
     background-color: #f37601;
     color: #ffffff;
@@ -489,6 +494,9 @@ footer {
         padding-bottom: 2.5rem;
     }
 
+    #works {
+        padding: 0;
+    }
 
     .works__fig {
         width: 45%;
@@ -498,6 +506,10 @@ footer {
     .forms {
         margin: auto;
         margin-right: 10%;
+    }
+
+    .button{
+        margin-left: 0;
     }
 
 }
@@ -521,6 +533,7 @@ footer {
     #page-top {
         display: none;
     }
+
     h3 {
         font-size: 1.7rem;
         padding-bottom: 2rem;
@@ -530,7 +543,7 @@ footer {
     .headerul {
         right: 5%;
     }
-    
+
 
     /* =============Aboutme=============== */
     .amgrid {
@@ -552,10 +565,11 @@ footer {
         display: block;
         text-align: center;
     }
+
     .ambox {
         margin: auto;
     }
-    
+
     .amboximg {
         width: 300px;
         height: auto;
@@ -566,64 +580,73 @@ footer {
     #skills {
         margin-top: 100px;
     }
+
     .chart-area {
         /*円グラフがスマホでつぶれないようにする*/
         position: relative;
         width: 90%;
         height: 70vh;
-       margin: auto;
-       text-align: center;
+        margin: auto;
+        text-align: center;
     }
 
     /* =============works=============== */
     #works {
         margin-top: 100px;
+        padding: 0;
     }
 
     .works__innner {
         display: block;
         margin: 0 auto;
-        
+
     }
 
     .works__fig {
         width: 100vw;
         margin: 0 auto;
         text-align: center;
-        
+
     }
+
     .works__p {
         margin: 0;
-        
+
     }
+
     /* =============contact=============== */
     #contact {
         margin-top: 100px;
     }
+
     .inputs {
-        display:block;
+        display: block;
         width: 100%;
     }
+
     input[type="text"],
     input[type="email"],
     input[type="tel"] {
-        width:100%;
+        width: 100%;
     }
+
     label {
         font-size: 1.125rem;
         text-align: center;
         margin: 0;
     }
+
     .forms {
-        margin:auto;
+        margin: auto;
     }
 
     .button {
         width: 100px;
         height: auto;
         margin-top: 40px;
+        margin-left: 0;
         text-align: center;
-        
+
     }
 
 }
