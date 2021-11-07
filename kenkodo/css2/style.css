@@ -4,10 +4,11 @@
 html {
   margin: 0 auto;
 }
+
 body {
-  font-family: "Yu Mincho" ;
-  font-weight:500;
-  }
+  font-family: "Yu Mincho";
+  font-weight: 500;
+}
 
 .wrapper {
   margin: 0 auto;
@@ -17,32 +18,34 @@ body {
 
 /*========= ナビゲーションのためのCSS ===============*/
 
-#g-nav{
+#g-nav {
   /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
-  position:fixed;
+  position: fixed;
   z-index: 999;
   /*ナビのスタート位置と形状*/
-top:0;
+  top: 0;
   right: -120%;
-width:100%;
-  height: 100vh;/*ナビの高さ*/
-background:#999;
+  width: 100%;
+  height: 100vh;
+  /*ナビの高さ*/
+  background: #999;
   /*動き*/
-transition: all 0.6s;
+  transition: all 0.6s;
 }
 
 /*アクティブクラスがついたら位置を0に*/
-#g-nav.panelactive{
+#g-nav.panelactive {
   right: 0;
 }
 
 /*ナビゲーションの縦スクロール*/
-#g-nav.panelactive #g-nav-list{
+#g-nav.panelactive #g-nav-list {
   /*ナビの数が増えた場合縦スクロール*/
   position: fixed;
-  z-index: 999; 
+  z-index: 999;
   width: 100%;
-  height: 100vh;/*表示する高さ*/
+  height: 100vh;
+  /*表示する高さ*/
   overflow: auto;
   -webkit-overflow-scrolling: touch;
 }
@@ -52,61 +55,62 @@ transition: all 0.6s;
   /*ナビゲーション天地中央揃え*/
   position: absolute;
   z-index: 999;
-  top:50%;
-  left:50%;
-  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /*リストのレイアウト設定*/
 
-#g-nav li{
-list-style: none;
+#g-nav li {
+  list-style: none;
   text-align: center;
 }
 
-#g-nav li a{
-color: #333;
-text-decoration: none;
-padding:10px;
-display: block;
-text-transform: uppercase;
-letter-spacing: 0.1em;
-font-weight: bold;
+#g-nav li a {
+  color: #333;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: bold;
 }
 
 /*========= ボタンのためのCSS ===============*/
-.openbtn1{
-position:fixed;
-  z-index: 9999;/*ボタンを最前面に*/
-top:10px;
-right: 10px;
-cursor: pointer;
+.openbtn1 {
+  position: fixed;
+  z-index: 9999;
+  /*ボタンを最前面に*/
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
   width: 50px;
-  height:50px;
+  height: 50px;
 }
 
-/*×に変化*/  
-.openbtn1 span{
+/*×に変化*/
+.openbtn1 span {
   display: inline-block;
   transition: all .4s;
   position: absolute;
   left: 5px;
   height: 3px;
   border-radius: 2px;
-background-color: rgb(32, 28, 28);
+  background-color: rgb(32, 28, 28);
   width: 80%;
 }
 
 .openbtn1 span:nth-of-type(1) {
-top:15px; 
+  top: 15px;
 }
 
 .openbtn1 span:nth-of-type(2) {
-top:23px;
+  top: 23px;
 }
 
 .openbtn1 span:nth-of-type(3) {
-top:31px;
+  top: 31px;
 }
 
 .openbtn1.active span:nth-of-type(1) {
@@ -117,10 +121,10 @@ top:31px;
 }
 
 .openbtn1.active span:nth-of-type(2) {
-opacity: 0;
+  opacity: 0;
 }
 
-.openbtn1.active span:nth-of-type(3){
+.openbtn1.active span:nth-of-type(3) {
   top: 30px;
   left: 18px;
   transform: translateY(-6px) rotate(45deg);
@@ -137,6 +141,32 @@ opacity: 0;
 
 h1 {
   color: #000;
-  
 }
 
+/*=====グリーティング=====*/
+#greeting {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.greeting__h2 {
+  text-align: center;
+  font-size: 30px;
+  margin: 20px 0;
+}
+
+p .greeting__p {
+  line-height: 30px;
+  font-size: 16px;
+  text-align: left;
+}
+/*=====ニュース=====*/
+#news{
+  text-align: center;
+}
+.news__img {
+  width: 100vw;
+}
+.news__p{
+  border-bottom: rgb(54, 54, 54) 1px solid;
+}
