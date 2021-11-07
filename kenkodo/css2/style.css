@@ -134,7 +134,7 @@ body {
 
 /*=====スライダーのためのcss=====*/
 #slider {
-  width: 100%;
+  width: auto;
   height: 100vh;
   /*スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
 }
@@ -193,21 +193,29 @@ p .greeting__p {
 
 
 .events__inner{
-  background-image: url(../imgs/お坊さん.jpg);
+  background-image: url(../imgs/sec3.jpg);
   background-size: cover;
-
+  background-position:center;
+  margin-bottom: 100px;
+}
+.events__inner:nth-child(2){
+  background-image: url(../imgs/sec2.jpg);
+}
+.events__inner:nth-child(3){
+  background-image: url(../imgs/お坊さん.jpg);
 }
 
+
 .inner__contents{
+  text-align: center;
   height: 500px;
   background-color: rgba(255, 255, 255,.5);
+  padding-top: 10px;
 }
 
 .tate{
   color: rgb(0, 0, 0);
-  font-size: 24px;
-  border: solid rgb(0, 0, 0) 1px;
-  padding:8px 1px;
+  font-size: 32px;
   writing-mode: vertical-lr;
   margin: 50px auto;
 }
@@ -215,4 +223,10 @@ p .greeting__p {
   font-size: 14px;
   text-align: center;
   padding: 10px;
+}
+
+button{
+  margin-top: 50px;
+  border: solid rgb(0, 0, 0) 1px;
+  padding:8px 60px;
 }
