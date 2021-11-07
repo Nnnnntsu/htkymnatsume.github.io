@@ -11,9 +11,9 @@ var windowwidth = window.innerWidth || document.documentElement.clientWidth || 0
       ];
     } else {
       var responsiveImage = [//タブレットサイズ（768px）以下用の画像
-        { src: 'https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-3/img/img_sp_01.jpg' },
-        { src: 'https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-3/img/img_sp_02.jpg' },
-        { src: 'https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-3/img/img_sp_03.jpg' }
+        { src: '../kenkodo/imgs/temple1.jpg' },
+        { src: '../kenkodo/imgs/temple2.jpg' },
+        { src: '../kenkodo/imgs/temple3.jpg' }
       ];
     }
 
@@ -26,4 +26,15 @@ $('#slider').vegas({
     animationDuration: 10000,//スライドアニメーション時間をミリ秒単位で設定
     animation: 'kenburnsDown',//スライドアニメーションの種類。http://vegas.jaysalvat.com/documentation/transitions/参照。kenburns、kenburnsUp、kenburnsDown、kenburnsRight、kenburnsLeft、kenburnsUpLeft、kenburnsUpRight、kenburnsDownLeft、kenburnsDownRight、randomが設定可能。
     slides: responsiveImage,//画像設定を読む
+  });
+
+
+  $(".openbtn1").click(function () {//ボタンがクリックされたら
+    $(this).toggleClass('active');//ボタン自身に activeクラスを付与し
+      $("#g-nav").toggleClass('panelactive');//ナビゲーションにpanelactiveクラスを付与
+  });
+  
+  $("#g-nav a").click(function () {//ナビゲーションのリンクがクリックされたら
+      $(".openbtn1").removeClass('active');//ボタンの activeクラスを除去し
+      $("#g-nav").removeClass('panelactive');//ナビゲーションのpanelactiveクラスも除去
   });
