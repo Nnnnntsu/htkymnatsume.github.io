@@ -477,6 +477,10 @@ footer {
         font-size: 60%;
     }
 
+    h1 {
+        font-family: arial black, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+
     .amgrid {
         display: block;
 
@@ -508,7 +512,7 @@ footer {
         margin-right: 10%;
     }
 
-    .button{
+    .button {
         margin-left: 0;
     }
 
@@ -521,7 +525,7 @@ footer {
     }
 
     h1 {
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-family: arial black, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
         font-size: 6rem;
         letter-spacing: 1px;
     }
