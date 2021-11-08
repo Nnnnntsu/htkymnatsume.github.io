@@ -321,6 +321,21 @@ td {
     height: 30px;
 }
 
+table span{
+    border: rgb(25, 245, 17) 1px solid;
+    font-size: 14px;
+    font-weight: 200;
+    padding: 2px;
+    animation: flash 1s linear infinite;
+}
+@keyframes flash {
+    0%,100% {
+      opacity: 1;
+    }
+    50% {
+        opacity: 0;
+      }
+}
 /* =======================Contact========================= */
 #contact {
     margin-top: 200px;
