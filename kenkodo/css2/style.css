@@ -77,6 +77,10 @@ body {
   font-weight: bold;
 }
 
+#g-nav li a:hover{
+  color: rgb(186, 189, 22);
+}
+
 /*========= ボタンのためのCSS ===============*/
 .openbtn1 {
   position: fixed;
