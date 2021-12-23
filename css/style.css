@@ -336,6 +336,16 @@ table span{
         opacity: 0;
       }
 }
+
+/* =======================Banner========================= */
+.banner__fig {
+    margin-bottom: 70px;
+    overflow: hidden;
+    width: 50%;
+    height: auto;
+    padding: 0 2%;
+}
+
 /* =======================Contact========================= */
 #contact {
     margin-top: 200px;
