@@ -346,6 +346,13 @@ table span{
     padding: 0 2%;
 }
 
+.banner__item {
+    display: block;
+    transition-duration: 0.3s;
+}
+
+
+
 /* =======================Contact========================= */
 #contact {
     margin-top: 200px;
